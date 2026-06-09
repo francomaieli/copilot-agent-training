@@ -1,0 +1,75 @@
+:root {
+  --background: #121212;
+  --surface: #181818;
+  --surface-raised: #1f1f1f;
+  --text-base: #ffffff;
+  --text-secondary: #b3b3b3;
+  --accent: #1ed760;
+  --error: #f3727f;
+  --info: #539df5;
+  --shadow-heavy: rgba(0, 0, 0, 0.5) 0 8px 24px;
+  --shadow-soft: rgba(0, 0, 0, 0.3) 0 8px 8px;
+  --input-border:
+    rgb(18, 18, 18) 0 1px 0,
+    rgb(124, 124, 124) 0 0 0 1px inset;
+  --font-body:
+    SpotifyMixUI, CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl,
+    CircularSp-Grek, CircularSp-Deva, 'Helvetica Neue', Helvetica, Arial,
+    'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, 'MS Gothic',
+    sans-serif;
+  --font-title:
+    SpotifyMixUITitle, CircularSp, CircularSp-Arab, CircularSp-Hebr,
+    CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, 'Helvetica Neue',
+    Helvetica, Arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo,
+    'MS Gothic', sans-serif;
+
+  font: 16px/1.5 var(--font-body);
+  color-scheme: dark;
+  color: var(--text-base);
+  background: var(--background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(30, 215, 96, 0.18), transparent 25%),
+    linear-gradient(180deg, #121212 0%, #090909 100%);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 32px 20px;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: var(--font-title);
+  color: var(--text-base);
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+  color: var(--text-base);
+}
