@@ -4,6 +4,45 @@ import './App.css'
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000'
 const SESSION_STORAGE_KEY = 'jwt-auth-session'
 
+const MICROSOFT_CERTS_2026 = [
+  {
+    code: 'AI-200',
+    name: 'Azure AI Cloud Developer Associate',
+    level: 'Associate',
+    description: 'Construye apps cloud nativas con IA generativa y Azure Foundry. Reemplaza AZ-204.',
+  },
+  {
+    code: 'AI-103',
+    name: 'Azure AI App & Agent Developer',
+    level: 'Associate',
+    description: 'Desarrolla agentes de IA, sistemas multi-agente y apps generativas. Evolución de AI-102.',
+  },
+  {
+    code: 'AI-300',
+    name: 'MLOps Engineer Associate',
+    level: 'Associate',
+    description: 'Gestiona el ciclo de vida de soluciones IA y operaciones de Machine Learning. Reemplaza DP-100.',
+  },
+  {
+    code: 'SC-500',
+    name: 'Cloud & AI Security Engineer',
+    level: 'Associate',
+    description: 'Asegura entornos habilitados con IA en Azure. Reemplaza AZ-500.',
+  },
+  {
+    code: 'AI-901',
+    name: 'Azure AI Fundamentals',
+    level: 'Fundamentals',
+    description: 'Fundamentos renovados sobre IA en Azure, Copilot y modelos generativos. Actualiza AI-900.',
+  },
+  {
+    code: 'AB-900',
+    name: 'Copilot & Agent Admin Fundamentals',
+    level: 'Fundamentals',
+    description: 'Administración de Copilot y agentes IA en organizaciones. Nueva certificación 2026.',
+  },
+]
+
 function normalizeRoute(pathname) {
   return pathname === '/welcome' ? '/welcome' : '/login'
 }
@@ -356,6 +395,20 @@ function App() {
                   >
                     Cerrar sesión
                   </button>
+                </div>
+
+                <div className="certs-section">
+                  <p className="certs-section-title">Certificaciones Microsoft 2026</p>
+                  <div className="certs-grid">
+                    {MICROSOFT_CERTS_2026.map((cert) => (
+                      <div key={cert.code} className="cert-card">
+                        <span className="cert-code">{cert.code}</span>
+                        <p className="cert-name">{cert.name}</p>
+                        <span className="cert-level">{cert.level}</span>
+                        <p className="cert-description">{cert.description}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </>
             )}

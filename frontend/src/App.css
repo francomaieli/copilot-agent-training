@@ -233,6 +233,76 @@
   gap: 12px;
 }
 
+.certs-section {
+  display: grid;
+  gap: 10px;
+}
+
+.certs-section-title {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.cert-card {
+  background: #121212;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cert-card:hover {
+  background: #1a1a1a;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 8px;
+}
+
+.cert-code {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cert-name {
+  margin: 0;
+  color: var(--text-base);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.cert-level {
+  align-self: flex-start;
+  font-size: 0.63rem;
+  font-weight: 600;
+  color: #121212;
+  background: var(--accent);
+  border-radius: 9999px;
+  padding: 2px 8px;
+  text-transform: capitalize;
+}
+
+.cert-description {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.69rem;
+  line-height: 1.4;
+}
+
 @media (max-width: 960px) {
   .app-shell {
     flex-direction: column;
@@ -252,7 +322,8 @@
   }
 
   .route-switcher,
-  .welcome-actions {
+  .welcome-actions,
+  .certs-grid {
     grid-template-columns: 1fr;
   }
 }
