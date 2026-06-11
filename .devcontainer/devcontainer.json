@@ -1,7 +1,11 @@
 {
   "name": "Python with Docker",
   "image": "mcr.microsoft.com/devcontainers/python:latest",
-  "features": {},
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    }
+  },
   "customizations": {
     "vscode": {
       "extensions": [
