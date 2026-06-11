@@ -3,6 +3,28 @@ import './App.css'
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000'
 const SESSION_STORAGE_KEY = 'jwt-auth-session'
+const MICROSOFT_CERTIFICATIONS_2026 = [
+  {
+    title: 'Microsoft Certified: Azure AI Engineer Associate',
+    retirementDate: '30 de junio de 2026',
+    url: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/',
+  },
+  {
+    title: 'Microsoft Certified: Azure AI Fundamentals',
+    retirementDate: '30 de junio de 2026',
+    url: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/',
+  },
+  {
+    title: 'Microsoft Certified: Azure Developer Associate',
+    retirementDate: '31 de julio de 2026',
+    url: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/',
+  },
+  {
+    title: 'Microsoft Certified: Azure Security Engineer Associate',
+    retirementDate: '31 de agosto de 2026',
+    url: 'https://learn.microsoft.com/en-us/credentials/certifications/azure-security-engineer/',
+  },
+]
 
 function normalizeRoute(pathname) {
   return pathname === '/welcome' ? '/welcome' : '/login'
@@ -340,6 +362,26 @@ function App() {
                     <strong>Protegido</strong>
                   </div>
                 </div>
+
+                <section className="certifications-panel">
+                  <p className="panel-label">Microsoft Learn 2026</p>
+                  <h3>Certificaciones con retiro programado en 2026</h3>
+                  <ul className="certification-cards">
+                    {MICROSOFT_CERTIFICATIONS_2026.map((certification) => (
+                      <li key={certification.title} className="certification-card">
+                        <p>{certification.title}</p>
+                        <span>Retiro programado: {certification.retirementDate}</span>
+                        <a
+                          href={certification.url}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Ver detalle oficial
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
 
                 <div className="welcome-actions">
                   <button

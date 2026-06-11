@@ -227,6 +227,63 @@
   font-weight: 700;
 }
 
+.certifications-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.certifications-panel h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-base);
+}
+
+.certification-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.certification-card {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #181818;
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-1px);
+  background: #1f1f1f;
+}
+
+.certification-card p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.certification-card span {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.certification-card a {
+  color: var(--accent);
+  font-size: 0.88rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.certification-card a:hover {
+  text-decoration: underline;
+}
+
 .welcome-actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
